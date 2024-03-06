@@ -11,6 +11,7 @@ import Model.Bean.Book;
 import Model.DAO.BookDAO;
 
 public class BookBO {
+    //all
 	BookDAO BookDAO = new BookDAO();
 
 	public Book findBook(String id) throws ClassNotFoundException, SQLException {
