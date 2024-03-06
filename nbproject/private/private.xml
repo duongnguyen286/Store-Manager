@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/web/Resources/img/AdminLTELogo.png</file>
-            <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/web/Resources/img/avatar5.png</file>
-            <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/web/add_category.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/BO/BookBO.java</file>
+            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/BO/CategoryBO.java</file>
+            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/web/edit_book.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/DAO/BookDAO.java</file>
+            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/Controller/Login.java</file>
         </group>
     </open-files>
 </project-private>
