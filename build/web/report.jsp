@@ -10,16 +10,19 @@
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
-            padding-top: 100px;
+       
         }
 
         #container {
-            max-width: 600px;
+
+/*            max-width: 600px;*/
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
-            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
+            margin-left: 250px;
+            
+/*            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;*/
         }
 
         label {
@@ -28,8 +31,21 @@
 
         #labelThongKe {
             cursor: pointer;
-            text-decoration: underline;
+/*            text-decoration: underline;*/
             text-align: center;
+            background-color: red;
+            color: white;
+            border-radius: 0.25rem;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border: 1px solid transparent;
+            font-weight: 400;
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            box-shadow: none;
+          
         }
 
         select, input[type="date"], button {
@@ -55,20 +71,50 @@
         #ketqua {
             margin-top: 20px;
         }
+        #type{
+/*            padding-bottom: 5px;
+            padding-top: 3px;
+            font-size: 14px;*/
+            color: #fff;
+            background-color: #dc3545;
+            border-color: #dc3545;
+            box-shadow: none;
+            cursor: pointer;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            font-weight: 400;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+        }
     </style>
-<div class="content-wrapper">
-	<!-- Main content -->
-	<section class="content">
-		<div class="container-fluid">
-			<div class="row">
-				<div class=""></div>
-				<div class="col-md-12">
-					<div class="card card-primary" style="margin-top: 12px;">
-                                            <h1>hello</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-</div>
+    <div id="container">
+        <label  for="thongke" id="labelThongKe" onclick="hienThiOption()">Xem báo cáo</label>
+        <div id="optionThongKe" style="display: none;">
+            
+             <form action="/StatisticServlet" method="post">
+                    <select id="thongke" name="thongke1">
+                        <option value="doanhthumh">Thống kê mặt hàng theo doanh thu</option>
+                        <option value="doanhthunv">Thống kê nhân viên theo doanh thu</option>                      
+                    </select>
+                    Từ ngày: <input type="date" name="startDate">
+                    Đến ngày: <input type="date" name="endDate">
+                    <input id="type" type="submit" value="Xem">
+                    
+            </form>
+        </div>
+
+        <div id="ketqua">
+            <!-- Kết quả thống kê sẽ được hiển thị ở đây -->
+        </div>
+    </div>
+    <script>
+        function hienThiOption() {
+            const optionThongKe = document.getElementById("optionThongKe");
+            optionThongKe.style.display = "block";
+        }
+    </script>
 <%@ include file="footer.jsp"%>

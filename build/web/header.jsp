@@ -149,12 +149,11 @@
 										<p>Danh mục sản phẩm</p>
 								</a></li>
 							</ul></li>
-                                                      <li class="nav-item "><a
-							href="${pageContext.request.contextPath}/ViewReport"
-							class="nav-link <c:if test="${sessionScope.Check.toString().equals('Manual')}">active</c:if> ">
-								<i class="nav-icon fas fa-book"></i>
-								<p>Báo cáo</p>
-						</a></li>
+                                                        
+                                                       <form style="display: block;padding: 0.5rem 1rem;margin-bottom: 0.2rem;" action="ViewReport" method="post">  
+                                              
+                                                            <button class="right fas " type="submit">Báo cáo</button>
+                                                       </form>
                                                         
 <!--                                            
                                                         
