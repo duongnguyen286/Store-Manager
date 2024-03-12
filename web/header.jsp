@@ -118,12 +118,7 @@
 					<ul class="nav nav-pills nav-sidebar flex-column"
 						data-widget="treeview" role="menu" data-accordion="false">
                                             
-<!--						<li class="nav-item "><a
-							href="${pageContext.request.contextPath}/UserManual"
-							class="nav-link <c:if test="${sessionScope.Check.toString().equals('Manual')}">active</c:if> ">
-								<i class="nav-icon fas fa-book"></i>
-								<p>Hướng dẫn</p>
-						</a></li>-->
+						
 
 						<li
 							class="nav-item has-treeview <c:if test="${sessionScope.Check.toString().equals('ManageBook') || sessionScope.Check.toString().equals('AddBook')||sessionScope.Check.toString().equals('ManageCategory')}">menu-open</c:if>"><a
@@ -154,6 +149,11 @@
 										<p>Danh mục sản phẩm</p>
 								</a></li>
 							</ul></li>
+                                                        
+                                                       <form style="display: block;padding: 0.5rem 1rem;margin-bottom: 0.2rem;" action="ViewReport" method="post">  
+                                              
+                                                            <button class="right fas " type="submit">Báo cáo</button>
+                                                       </form>
                                                         
 <!--                                            
                                                         

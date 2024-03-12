@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/DAO/CategoryDAO.java</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/Controller/AddReader.java</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/BO/BookBO.java</file>
@@ -22,6 +23,12 @@
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/web/WEB-INF/web.xml</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/web/Resources/css/adminlte.css</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/BO/CategoryBO.java</file>
+=======
+            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/Controller/ManageCategory.java</file>
+            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/web/report.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/Controller/ViewReport.java</file>
+            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/web/header.jsp</file>
+>>>>>>> f878bd00668c2dc7f8f8cb4e5651531a81aebf37
         </group>
     </open-files>
 </project-private>
