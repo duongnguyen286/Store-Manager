@@ -13,8 +13,12 @@
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/conf/MANIFEST.MF</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/web/add_category.jsp</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/BO/ReaderBO.java</file>
+            <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/DAO/ConnectDatabase.java</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/DAO/BookDAO.java</file>
+            <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/Controller/AddCategory.java</file>
+            <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/nbproject/build-impl.xml</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/web/Resources/img/avatar1.jpg</file>
+            <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/Controller/AddBook.java</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/web/WEB-INF/web.xml</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/web/Resources/css/adminlte.css</file>
             <file>file:/D:/PTIT-2024/DBCLPM/StoreManager/src/java/Model/BO/CategoryBO.java</file>
