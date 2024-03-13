@@ -7,15 +7,9 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
-<<<<<<< HEAD
-                    <file>${file.reference.mysql-connector-java-5.1.48.jar}</file>
+                    <file>${&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD}</file>
                 </library>
                 <library dirs="200">
-                    <file>${file.reference.taglibs-standard-impl-1.2.5.jar}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.taglibs-standard-spec-1.2.5.jar}</file>
-=======
                     <file>${file.reference.mysql-connector-java-5.1.48.jar-1}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
@@ -26,15 +20,14 @@
                 <library dirs="200">
                     <file>${file.reference.taglibs-standard-spec-1.2.5.jar-1}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
->>>>>>> f878bd00668c2dc7f8f8cb4e5651531a81aebf37
                 </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>
-                <root id="src.dir"/>
+                <root id="src.dir" name="Source Packages"/>
             </source-roots>
             <test-roots>
-                <root id="test.src.dir"/>
+                <root id="test.src.dir" name="Test Packages"/>
             </test-roots>
         </data>
     </configuration>
