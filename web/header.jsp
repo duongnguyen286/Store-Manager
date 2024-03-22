@@ -118,7 +118,12 @@
 					<ul class="nav nav-pills nav-sidebar flex-column"
 						data-widget="treeview" role="menu" data-accordion="false">
                                             
-						
+<!--						<li class="nav-item "><a
+							href="${pageContext.request.contextPath}/UserManual"
+							class="nav-link <c:if test="${sessionScope.Check.toString().equals('Manual')}">active</c:if> ">
+								<i class="nav-icon fas fa-book"></i>
+								<p>Hướng dẫn</p>
+						</a></li>-->
 
 						<li
 							class="nav-item has-treeview <c:if test="${sessionScope.Check.toString().equals('ManageBook') || sessionScope.Check.toString().equals('AddBook')||sessionScope.Check.toString().equals('ManageCategory')}">menu-open</c:if>"><a
@@ -131,13 +136,13 @@
 						</a>
 							<ul class="nav nav-treeview">
 								<li class="nav-item"><a
-									href="${pageContext.request.contextPath}/ManageBook"
+									href="${pageContext.request.contextPath}/ListProduct"
 									class="nav-link <c:if test="${sessionScope.Check.toString().equals('ManageBook')}">active</c:if> ">
 										<i class="far fa-circle nav-icon"></i>
 										<p>Danh sách loại mặt hàng</p>
 								</a></li>
 								<li class="nav-item"><a
-									href="${pageContext.request.contextPath}/AddBook"
+									href="${pageContext.request.contextPath}/AddProduct"
 									class="nav-link <c:if test="${sessionScope.Check.toString().equals('AddBook')}">active</c:if>">
 										<i class="far fa-circle nav-icon"></i>
 										<p>Thêm loại mặt hàng</p>
@@ -149,14 +154,6 @@
 										<p>Danh mục sản phẩm</p>
 								</a></li>
 							</ul></li>
-                                                        
-                                                        <li class="nav-item"><a
-							href="${pageContext.request.contextPath}/ViewReport" class="nav-link">
-								<i class="nav-icon fas fa-book"></i>
-								<p>Báo cáo</p>
-						       </a></li>
-                                                        
-
                                                         
 <!--                                            
                                                         

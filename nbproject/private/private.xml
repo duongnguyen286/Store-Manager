@@ -3,19 +3,45 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/web/home.jsp</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/DAO/ThongkeDAO.java</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/DAO/ChitietDAO.java</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/web/report.jsp</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/Controller/ViewReport.java</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/DAO/CategoryDAO.java</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/DAO/UserDAO.java</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/DAO/ReaderDAO.java</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/Controller/StatisticServlet.java</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/DAO/BookDAO.java</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/Controller/ManageCategory.java</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/web/header.jsp</file>
-            <file>file:/C:/Users/Admin/Desktop/DBCLPM/Store-Manager/src/java/Model/DAO/ConnectDatabase.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/DAO/BookDAO.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/web/edit_category.jsp</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/UserManual.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/BO/CategoryBO.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/AddReader.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/web/header.jsp</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/DAO/ConnectDatabase.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/web/login.jsp</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/Logout.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/BO/GetCookie.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Model/Bean/Book.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/DAO/CategoryDAO.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/AddCategory.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Model/Bean/Reader.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/web/home.jsp</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/ManageBook.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/web/META-INF/context.xml</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/BO/BookBO.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/ConfirmReader.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/SearchBook.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Model/Bean/Category.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/EditCategory.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/ManageCategory.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/DAO/UserDAO.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/web/manage_book.jsp</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/web/edit_book.jsp</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/BO/UserBO.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/DAO/ReaderDAO.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/ManageReader.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/SearchReader.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/CookieFilter.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/Login.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/DeleteBook.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/EditBook.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/BO/ReaderBO.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/AddBook.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Controller/DeleteCategory.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/CNPM/Store-Manager-master/src/java/Model/Bean/User.java</file>
         </group>
     </open-files>
 </project-private>

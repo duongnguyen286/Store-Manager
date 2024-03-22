@@ -22,7 +22,7 @@
 									<div class="input-group input-group-sm" style="width: 200px;">
 										<input type="text" name="data_search"
 											class="form-control float-right"
-											placeholder="Tìm kiếm theo tên">
+											placeholder="Tìm kiếm theo tên sp">
 
 										<div class="input-group-append">
 											<button type="submit" class="btn btn-primary">
