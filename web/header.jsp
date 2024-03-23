@@ -154,6 +154,11 @@
 										<p>Danh mục sản phẩm</p>
 								</a></li>
 							</ul></li>
+                                                        <li class="nav-item"><a
+							href="${pageContext.request.contextPath}/ViewReport" class="nav-link">
+								<i class="nav-icon fas fa-book"></i>
+								<p>Báo cáo</p>
+						       </a></li>
                                                         
 <!--                                            
                                                         

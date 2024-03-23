@@ -3,7 +3,7 @@ package BO;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
 
 import Model.Bean.Category;
 import DAO.CategoryDAO;
