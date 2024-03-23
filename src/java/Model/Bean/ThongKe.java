@@ -15,7 +15,7 @@ import java.util.Date;
 public class ThongKe {
     private Integer maMH;
     private String name;
-
+    private Integer soluong;
     private Integer doanhthu;
     
     public ThongKe(){
@@ -46,16 +46,25 @@ public class ThongKe {
     public void setDoanhthu(Integer doanhthu) {
         this.doanhthu = doanhthu;
     }
+    
+    public Integer getSoluong() {
+        return soluong;
+    }
 
-    public ThongKe(Integer maMH, String name,  Integer doanhthu) {
+    public void setSoluong(Integer soluong) {
+        this.soluong = soluong;
+    }
+
+    public ThongKe(Integer maMH, String name, Integer soluong, Integer doanhthu) {
         this.maMH = maMH;
         this.name = name;
+        this.soluong=soluong;
         this.doanhthu = doanhthu;
     }
 
     @Override
     public String toString() {
-        return "ThongKe{" + "maMH=" + maMH + ", name=" + name +", doanhthu=" + doanhthu + '}';
+        return "ThongKe{" + "maMH=" + maMH + ", name=" + name +", soluong="+soluong+", doanhthu=" + doanhthu + '}';
     }
     
 }
