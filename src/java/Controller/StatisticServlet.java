@@ -71,14 +71,14 @@ public class StatisticServlet extends HttpServlet {
 //        }
         
            
-    }
+//    }
 
     /** 
      * Returns a short description of the servlet.
      * @return a String containing servlet description
      */
     @Override
-    @Override
+//    @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
