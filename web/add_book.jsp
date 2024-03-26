@@ -36,7 +36,7 @@
 						<!-- /.card-header -->
 						<!-- form start -->
 						<form role="form" method="post"
-							action="${pageContext.request.contextPath}/AddBook"
+							action="${pageContext.request.contextPath}/AddProduct"
 							enctype="multipart/form-data">
 
 							<div class="card-body">
