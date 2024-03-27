@@ -55,23 +55,23 @@ public class StatisticServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {    
         processRequest(request, response);
-//        String thongKeOption = request.getParameter("thongke");
-//        System.out.println("Thống kê option: " + thongKeOption);
+        String thongKeOption = request.getParameter("thongke1");
+        System.out.println("Thống kê option: " + thongKeOption);
         String ngayBD=request.getParameter("startDate");
         String ngayKT=request.getParameter("endDate");
         System.out.println("Thống kê option: " + ngayKT);
-//        if("doanhthumh".equals(thongKeOption)){
+        if("doanhthumh".equals(thongKeOption)){
         List<ThongKe>thongKeList = ThongkeDAO.search(ngayBD,ngayKT);
         System.out.println(thongKeList);
         request.setAttribute("thongKeList", thongKeList);
         request.getRequestDispatcher("thongke.jsp").forward(request, response);
         }
-//        else{
-//            request.getRequestDispatcher("thongke.jsp").forward(request, response);
-//        }
+        else{
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        }
         
            
-//    }
+    }
 
     /** 
      * Returns a short description of the servlet.
