@@ -1,19 +1,19 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ include file="header.jsp"%>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          <title>Chi tiết các giao dịch</title>
     <style>
         table {
             border-collapse: collapse;
-            width: 80%;
+            width: 75%;
             margin: 20px auto;
+            margin-left: 270px;
         }
         th, td {
             border: 1px solid #ccc;
-            padding: 8px;
+            padding: 6px;
             text-align: left;
         }
         th {
@@ -22,7 +22,7 @@
     </style>
     </head>
     <body>
-        <h1>Chi tiết các giao dịch</h1>
+        <h1 style="margin-left: 270px;">Chi tiết các giao dịch</h1>
     <table>
         <tr>
             <th>Mã mặt hàng</th>
@@ -45,5 +45,4 @@
             </tr>
         </c:forEach>
     </table>
-    </body>
-</html>
+

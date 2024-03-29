@@ -58,19 +58,17 @@
         <h1 style="margin-left: 250px;">Kết quả thống kê mặt hàng theo doanh thu</h1>
     <table style="margin-left: 250px; text-align: center;" border="1">
         <tr>
-            <th>Mã mặt hàng</th>
+            <th>Mã nhân viên</th>
             <th>Tên sản phẩm</th>
-            <th>Số lượng đã bán</th>
             <th>Doanh thu</th>
             <th>Chi tiết giao dịch</th>
         </tr>
-        <c:forEach items="${thongKeList}" var="p">
+        <c:forEach items="${thongKeNvList}" var="p">
             <tr>
-                <td>${p.maMH}</td>
+                <td>${p.maNV}</td>
                 <td>${p.name}</td>
-                <td>${p.soluong}</td>
                 <td>${p.doanhthu}</td>
-                <td><a href="chitiet?sid=${p.maMH}">click</a></td>
+                <td><a href="chitiet1?sid=${p.maNV}">click</a></td>
             </tr>
         </c:forEach>
     </table>

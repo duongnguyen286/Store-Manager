@@ -13,7 +13,7 @@
         }
         th, td {
             border: 1px solid #ccc;
-            padding: 6px;
+            padding: 8px;
             text-align: left;
         }
         th {
@@ -22,26 +22,22 @@
     </style>
     </head>
     <body>
-        <h1 style="margin-left: 270px;">Chi tiết các giao dịch</h1>
+        <h1 style="margin-left: 270px">Chi tiết các giao dịch</h1>
     <table>
         <tr>
-            <th>Mã mặt hàng</th>
-            <th>Tên mặt hàng</th>
-            <th>Mã hóa đơn</th>           
-            <th>Số lượng</th>
-            <th>Ngày bán</th>
-            <th>Mã nhân viên bán hàng</th>
+            <th>Mã hóa đơn</th>
+            <th>Ngày</th>
+            <th>Tên nhân viên</th>           
             <th>Mã khách hàng</th>
+            <th>Tổng tiền</th>
         </tr>    
-        <c:forEach items="${chiTietList}" var="c">
+        <c:forEach items="${chiTietNVList}" var="c">
             <tr>
-                <td>${c.maMH}</td>
-                <td>${c.name}</td>
-                <td>${c.maHD}</td>
-                <td>${c.soLuong}</td>
+                <td>${c.idHd}</td>
                 <td>${c.ngay}</td>
-                <td>${c.maNVBH}</td>          
-                <td>${c.maKH}</td>
+                <td>${c.name}</td>
+                <td>${c.idKH}</td>
+                <td>${c.tongtien}</td>          
             </tr>
         </c:forEach>
     </table>

@@ -6,6 +6,7 @@ package DAO;
 
 
 import Model.Bean.ChiTiet;
+import Model.Bean.chitiet1;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -37,6 +38,28 @@ public class ChitietDAO {
                 list.add(new ChiTiet(rs.getInt(1), rs.getString(2),
                                      rs.getInt(3), rs.getInt(4),
                                      rs.getString(5), rs.getInt(6),rs.getInt(7)));
+            }
+            System.out.println(query);   
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return list;
+    }
+    
+    public static List<chitiet1> ChiTietNV(String maNV){
+        List<chitiet1>list=new ArrayList<>();
+        String query="SELECT h.idHoaDon, h.ngay, e.name, h.idKH, h.TongTien\n" +
+                        "FROM hoadon h\n" +
+                        "JOIN employees e ON h.idNVBH = e.id\n" +
+                        "WHERE h.idNVBH = '"+maNV+"';";
+        try {
+            conn = ConnectDatabase.getMySQLConnection();
+            ps=conn.prepareStatement(query);
+            rs=ps.executeQuery();
+            while(rs.next()){
+                list.add(new chitiet1(rs.getInt(1), rs.getString(2),
+                                     rs.getString(3), rs.getInt(4),
+                                     rs.getInt(5)));
             }
             System.out.println(query);   
         } catch (Exception e) {

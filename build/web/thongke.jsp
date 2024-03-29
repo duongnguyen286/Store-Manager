@@ -3,7 +3,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="header.jsp"%>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Kết quả thống kê</title>
+        <title>Kết quả thống kê</title>       
         <style>
         body {      
             font-family: Arial, sans-serif;
@@ -74,5 +74,6 @@
             </tr>
         </c:forEach>
     </table>
+        
 <%--<%@ include file="footer.jsp"%>--%>
 

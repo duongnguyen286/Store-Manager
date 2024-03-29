@@ -95,13 +95,13 @@
         <label  for="thongke" id="labelThongKe" onclick="hienThiOption()">Xem báo cáo</label>
         <div id="optionThongKe" style="display: none;">
             
-             <form action="/StatisticServlet" method="post">
+             <form id="statisticForm" action="/StatisticServlet" method="post" >
                     <select id="thongke" name="thongke1">
                         <option value="doanhthumh">Thống kê mặt hàng theo doanh thu</option>
                         <option value="doanhthunv">Thống kê nhân viên theo doanh thu</option>                      
                     </select>
-                    Từ ngày: <input type="date" name="startDate">
-                    Đến ngày: <input type="date" name="endDate">
+                    Từ ngày: <input type="date" name="startDate" required>
+                    Đến ngày: <input type="date" name="endDate" required>
                     <input id="type" type="submit" value="Xem">
                     
             </form>
@@ -116,5 +116,11 @@
             const optionThongKe = document.getElementById("optionThongKe");
             optionThongKe.style.display = "block";
         }
+        document.getElementById("statisticForm").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của phím Enter
+            document.getElementById("type").click(); // Kích hoạt sự kiện click trên nút submit
+        }
+    });  
     </script>
 <%@ include file="footer.jsp"%>
