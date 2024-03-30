@@ -92,8 +92,8 @@
         }
     </style>
     <div id="container">
-        <label  for="thongke" id="labelThongKe" onclick="hienThiOption()">Xem báo cáo</label>
-        <div id="optionThongKe" style="display: none;">
+<!--        <label  for="thongke" id="labelThongKe" onclick="hienThiOption()">Xem báo cáo</label>-->
+        <div id="optionThongKe">
             
              <form id="statisticForm" action="/StatisticServlet" method="post" >
                     <select id="thongke" name="thongke1">
@@ -112,10 +112,10 @@
         </div>
     </div>
     <script>
-        function hienThiOption() {
-            const optionThongKe = document.getElementById("optionThongKe");
-            optionThongKe.style.display = "block";
-        }
+//        function hienThiOption() {
+//            const optionThongKe = document.getElementById("optionThongKe");
+//            optionThongKe.style.display = "block";
+//        }
         document.getElementById("statisticForm").addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault(); // Ngăn chặn hành động mặc định của phím Enter
