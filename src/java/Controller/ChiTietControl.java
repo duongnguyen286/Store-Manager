@@ -44,6 +44,7 @@ public class ChiTietControl extends HttpServlet {
         List<ChiTiet>chiTietList = ChitietDAO.ChiTiet(maMH);
         System.out.println("1");
         request.setAttribute("chiTietList", chiTietList);
+        request.getSession().setAttribute("Check", "Viewreport");
         request.getRequestDispatcher("chitietGD.jsp").forward(request, response);
     } 
 

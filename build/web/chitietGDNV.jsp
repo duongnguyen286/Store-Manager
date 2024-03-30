@@ -2,14 +2,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="header.jsp"%>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="Resources/plugins/datatables/jquery.dataTables.min.js"></script>
+<script
+src="Resources/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script
+src="Resources/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script
+src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="Resources/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="Resources/dist/js/demo.js"></script>
          <title>Chi tiết các giao dịch</title>
     <style>
+        body {      
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding-top: 30px;
+            padding-left: 20px;
+          
+        }
+        h1 {
+            margin-top: 20px;
+            color: #333;
+            font-weight: 400;
+            font-size: 1.1rem;
+            line-height: 1.2;
+            color: inherit;
+            
+        }
         table {
             border-collapse: collapse;
-            width: 75%;
+            width: 95%;
             margin: 20px auto;
-            margin-left: 270px;
         }
         th, td {
             border: 1px solid #ccc;
@@ -17,12 +42,12 @@
             text-align: left;
         }
         th {
-            background-color: #f2f2f2;
+/*            background-color: #f2f2f2;*/
+     color: #333;
         }
     </style>
-    </head>
-    <body>
-        <h1 style="margin-left: 270px">Chi tiết các giao dịch</h1>
+<div class="content-wrapper">
+        <h1>Chi tiết các giao dịch</h1>
     <table>
         <tr>
             <th>Mã hóa đơn</th>
@@ -41,4 +66,17 @@
             </tr>
         </c:forEach>
     </table>
+</div>
+    <%@ include file="footer.jsp" %>
+<script src="Resources/plugins/datatables/jquery.dataTables.min.js"></script>
+<script
+src="Resources/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script
+src="Resources/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script
+src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="Resources/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="Resources/dist/js/demo.js"></script>
 

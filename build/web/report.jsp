@@ -4,6 +4,17 @@
 <%@ include file="header.jsp"%>
 <!-- Main content -->
 <!-- Content Wrapper. Contains page content -->
+<script src="Resources/plugins/datatables/jquery.dataTables.min.js"></script>
+<script
+src="Resources/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script
+src="Resources/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script
+src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="Resources/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="Resources/dist/js/demo.js"></script>
 <style>
         body {
             
@@ -19,7 +30,6 @@
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
-            margin-left: 250px;
             
 /*            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
             border-radius: 5px;*/
@@ -91,6 +101,7 @@
             
         }
     </style>
+    <div class="content-wrapper">
     <div id="container">
 <!--        <label  for="thongke" id="labelThongKe" onclick="hienThiOption()">Xem báo cáo</label>-->
         <div id="optionThongKe">
@@ -110,6 +121,7 @@
         <div id="ketqua">
             <!-- Kết quả thống kê sẽ được hiển thị ở đây -->
         </div>
+    </div>
     </div>
     <script>
 //        function hienThiOption() {

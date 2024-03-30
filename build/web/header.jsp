@@ -244,7 +244,7 @@
                                                 <p>Danh mục sản phẩm</p>
                                             </a></li>
                                     </ul></li>
-                            <li class="nav-item has-treeview <c:if test="${sessionScope.Check.toString().equals('ViewReport')}">menu-open</c:if>">
+                            <li class="nav-item has-treeview <c:if test="${sessionScope.Check.toString().equals('Viewreport')}">menu-open</c:if>">
                                 <a href="${pageContext.request.contextPath}/ViewReport" class="nav-link">
                                     <i class="nav-icon fas fa-book"></i>
                                     <p>Báo cáo thống kê</p>

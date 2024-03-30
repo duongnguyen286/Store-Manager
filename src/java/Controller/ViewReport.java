@@ -28,6 +28,7 @@ public class ViewReport extends HttpServlet {
 			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/login.jsp");
 			dispatcher.forward(request, response);
 		} else {
+        request.getSession().setAttribute("Check", "Viewreport");
         request.getRequestDispatcher("report.jsp").forward(request, response);
         }
     } 
