@@ -27,7 +27,7 @@
 					<!-- general form elements -->
 					<div class="card card-primary">
 						<div class="card-header">
-							<h3 class="card-title">Thêm loại sản phẩm</h3>
+							<h3 class="card-title">Thêm loại mặt hàng </h3>
 						</div>
 						<div class="row justify-content-center"
 							style="margin-top: 15px; margin-bottom: -15px;">
@@ -36,12 +36,12 @@
 						<!-- /.card-header -->
 						<!-- form start -->
 						<form role="form" method="post"
-							action="${pageContext.request.contextPath}/AddBook"
+							action="${pageContext.request.contextPath}/AddProduct"
 							enctype="multipart/form-data">
 
 							<div class="card-body">
 								<div class="form-group">
-									<label>Nhập tên sản phẩm</label> <input type="text"
+									<label>Nhập tên sản phẩm<span style="color: red">&nbsp;*</span></label> <input type="text"
 										class="form-control" id="name" name="name"
 										placeholder="Nhập tên sản phẩm">
 								</div>
@@ -59,7 +59,7 @@
 										class="form-control" id="count" name="count" min="1" value="1">
 								</div>
 								<div class="form-group">
-									<label for="exampleInputFile">Thêm ảnh</label>
+									<label for="exampleInputFile">Thêm ảnh<span style="color: red">&nbsp;*</span></label>
 									<div class="input-group">
 										<div class="custom-file">
 											<input type="file" accept="image/png, image/jpeg"
@@ -72,8 +72,8 @@
 							</div>
 							<div class="card-footer">
 								<button type="submit" class="btn btn-primary ">Lưu</button>
-								<input type="button" value="Trở lại" class="btn btn-primary"
-									onclick="location.href='${pageContext.request.contextPath}/ManageBook'">
+								<input type="button" value="Trở lại" class="btn btn-secondary"
+									onclick="location.href='${pageContext.request.contextPath}/ListProduct'">
 							</div>
 						</form>
 					</div>

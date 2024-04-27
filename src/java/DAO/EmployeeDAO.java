@@ -222,9 +222,10 @@ public class EmployeeDAO {
                 matcher = pattern.matcher(rs.getString("code"));
             }
 
-            if (matcher.find()) {
+            if (matcher != null && matcher.find()) {
                 return code + String.valueOf(Integer.parseInt(matcher.group()) + 1);
             }
+            return code + "1";
         }
 
         return "UNKNOWN";

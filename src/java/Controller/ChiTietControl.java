@@ -1,11 +1,8 @@
 package Controller;
-import DAO.ThongkeDAO;
-import Model.Bean.ThongKe;
-import Model.Bean.ThongKe1;
+import DAO.ChitietDAO;
+import Model.Bean.ChiTiet;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,9 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet(name="Statistic", urlPatterns={"/StatisticServlet"})
-public class StatisticServlet extends HttpServlet {
+@WebServlet(name="ChiTiet", urlPatterns={"/chitiet"})
+public class ChiTietControl extends HttpServlet {
+   
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request
@@ -27,7 +24,7 @@ public class StatisticServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+       
     } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -41,8 +38,14 @@ public class StatisticServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        processRequest(request, response);
-        
+//        processRequest(request, response);
+        String maMH=request.getParameter("sid");
+        System.out.println(maMH);
+        List<ChiTiet>chiTietList = ChitietDAO.ChiTiet(maMH);
+        System.out.println("1");
+        request.setAttribute("chiTietList", chiTietList);
+        request.getSession().setAttribute("Check", "Viewreport");
+        request.getRequestDispatcher("chitietGD.jsp").forward(request, response);
     } 
 
     /** 
@@ -54,27 +57,11 @@ public class StatisticServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {    
+    throws ServletException, IOException {
         processRequest(request, response);
-        String thongKeOption = request.getParameter("thongke1");
-        System.out.println("Thống kê option: " + thongKeOption);
-        String ngayBD=request.getParameter("startDate");
-        String ngayKT=request.getParameter("endDate");
-        System.out.println("Thống kê option: " + ngayKT);
-        if("doanhthumh".equals(thongKeOption)){
-            List<ThongKe>thongKeList = ThongkeDAO.search(ngayBD,ngayKT);
-            System.out.println(thongKeList);
-            request.setAttribute("thongKeList", thongKeList);
-            request.getRequestDispatcher("thongke.jsp").forward(request, response);
-        }
-        else{
-            List<ThongKe1>thongKeNvList = ThongkeDAO.search1(ngayBD,ngayKT);
-            System.out.println(thongKeNvList);
-            request.setAttribute("thongKeNvList", thongKeNvList);
-            request.getRequestDispatcher("thongkenv.jsp").forward(request, response);
-        }
+       
+
         
-           
     }
 
     /** 
@@ -82,7 +69,6 @@ public class StatisticServlet extends HttpServlet {
      * @return a String containing servlet description
      */
     @Override
-//    @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>

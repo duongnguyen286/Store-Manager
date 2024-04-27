@@ -16,7 +16,7 @@
 				<div class="col-md-6">
 					<div class="card">
 						<div class="card-header">
-							<h3 class="card-title">Danh sách danh mục sản phẩm</h3>
+							<h3 class="card-title">Danh mục sản phẩm</h3>
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">

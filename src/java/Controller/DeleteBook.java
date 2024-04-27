@@ -56,7 +56,7 @@ public class DeleteBook extends HttpServlet {
 			}
 		}
 		request.setAttribute("errorString", "Đã xóa thành công");
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/ManageBook");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/ListProduct");
 		dispatcher.forward(request, response);
 	}
 

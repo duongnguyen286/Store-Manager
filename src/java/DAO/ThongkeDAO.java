@@ -7,7 +7,7 @@ package DAO;
 
 import Model.Bean.ThongKe;
 import java.sql.Connection;
-
+import Model.Bean.ThongKe1;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
@@ -37,7 +37,28 @@ public class ThongkeDAO {
             rs=ps.executeQuery();
             while(rs.next()){
                 list.add(new ThongKe(rs.getInt(1), rs.getString(2),rs.getInt(3),
-                                       rs.getInt(3)));
+                                       rs.getInt(4)));
+            }
+            System.out.println(list);
+            
+        }catch(Exception e){
+            
+        }
+        return list;
+    }
+    public static List<ThongKe1> search1(String ngaybd, String ngaykt){
+        List<ThongKe1>list=new ArrayList<>();
+        String query="SELECT e.id, e.name, SUM(h.TongTien) AS TongTien\n" +
+            "FROM hoadon h\n" +
+            "JOIN employees e ON h.idNVBH = e.id\n" +
+            "WHERE h.ngay >= '"+ngaybd+"' AND h.ngay <= '"+ngaykt+"'\n" +
+            "GROUP BY e.id, e.name;";
+        try{
+            conn = ConnectDatabase.getMySQLConnection();
+            ps=conn.prepareStatement(query);
+            rs=ps.executeQuery();
+            while(rs.next()){
+                list.add(new ThongKe1(rs.getInt(1), rs.getString(2),rs.getInt(3)));
             }
             System.out.println(list);
             

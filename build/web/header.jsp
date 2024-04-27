@@ -169,7 +169,7 @@
                 <a href="${pageContext.request.contextPath}/UserManual" class="brand-link"> <img
                         src="Resources/img/AdminLTELogo.png" alt="AdminLTE Logo"
                         class="brand-image img-circle elevation-3" style="opacity: .8">
-                    <span class="brand-text font-weight-light">Quán lý cửa hàng</span>
+                    <span class="brand-text font-weight-light">Quản lý cửa hàng</span>
                 </a>
 
                 <!-- Sidebar -->
@@ -244,11 +244,12 @@
                                                 <p>Danh mục sản phẩm</p>
                                             </a></li>
                                     </ul></li>
-                                <li class="nav-item"><a
-                                        href="${pageContext.request.contextPath}/ViewReport" class="nav-link">
+                            <li class="nav-item has-treeview <c:if test="${sessionScope.Check.toString().equals('Viewreport')}">menu-open</c:if>">
+                                <a href="${pageContext.request.contextPath}/ViewReport" class="nav-link">
                                     <i class="nav-icon fas fa-book"></i>
-                                    <p>Báo cáo</p>
-                                </a></li>
+                                    <p>Báo cáo thống kê</p>
+                                </a>
+                            </li>
                             <li class="nav-item has-treeview <c:if test="${sessionScope.Check.toString().equals('Employee')}">menu-open</c:if>">
                                 <a href="${pageContext.request.contextPath}/employees" class="nav-link">
                                     <i class="nav-icon fas fa-book"></i>

@@ -35,6 +35,7 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
         }
 
         table {
+            margin-left: 250px;
             border-collapse: collapse;
             width: 95%;
             margin: 20px auto;
@@ -63,22 +64,22 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
             background-color: #ddd;
         }
     </style>
-
     <div class="content-wrapper">
+
         <h1>Kết quả thống kê mặt hàng theo doanh thu</h1>
     <table style="text-align: center;" border="1">
-            <th>Mã mặt hàng</th>
+        <tr>
+            <th>Mã nhân viên</th>
             <th>Tên sản phẩm</th>
-            <th>Số lượng đã bán</th>
             <th>Doanh thu</th>
             <th>Chi tiết giao dịch</th>
-        <c:forEach items="${thongKeList}" var="p">
+        </tr>
+        <c:forEach items="${thongKeNvList}" var="p">
             <tr>
-                <td  style="text-align: center;">${p.maMH}</td>
+                <td>${p.maNV}</td>
                 <td>${p.name}</td>
-                <td  style="text-align: center;">${p.soluong}</td>
-                <td  style="text-align: right;">${p.doanhthu}</td>
-                <td><a href="chitiet?sid=${p.maMH}">click</a></td>
+                <td>${p.doanhthu}</td>
+                <td><a href="chitiet1?sid=${p.maNV}">click</a></td>
             </tr>
         </c:forEach>
     </table>

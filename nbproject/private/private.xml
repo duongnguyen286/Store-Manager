@@ -3,23 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/Model/Bean/Employee.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/Controller/AddBook.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/DAO/ConnectDatabase.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/web/header.jsp</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/Model/Bean/Reader.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/Controller/AddEmployeeController.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/Controller/EmployeeController.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/web/add-employee.jsp</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/web/WEB-INF/web.xml</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/BO/EmployeeBO.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/DAO/EmployeeDAO.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/DAO/ReaderDAO.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/web/META-INF/context.xml</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/BO/BookBO.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/web/employee.jsp</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/src/java/DAO/BookDAO.java</file>
-            <file>file:/E:/PTIT/Nam4/Sem2/SQA/Store-Manager/nbproject/build-impl.xml</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/update-employee.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/chitietGD.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/edit_category.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/manage_category.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/src/java/Controller/AddEmployee.java</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/manage_book.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/Resources/css/alt/adminlte.core.min.css</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/add_book.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/chitietGDNV.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/thongke.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/src/java/Controller/AddBook.java</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/login.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/home.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/header.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/src/java/Controller/AddCategory.java</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/thongkenv.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/employee.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/report.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/manage_reader.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/add_category.jsp</file>
+            <file>file:/D:/Kì%202%20năm%204/Store-Manager/web/add-employee.jsp</file>
         </group>
     </open-files>
 </project-private>

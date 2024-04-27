@@ -14,8 +14,8 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
 <!-- AdminLTE for demo purposes -->
 <script src="Resources/dist/js/demo.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Kết quả thống kê</title>       
-        <style>
+         <title>Chi tiết các giao dịch</title>
+    <style>
         body {      
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -23,7 +23,21 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
             padding-left: 20px;
           
         }
-        
+        table {
+            border-collapse: collapse;
+            width: 95%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px;
+            text-align: left;
+            
+        }
+        th {
+/*            background-color: #333;*/
+            color: #333;
+        }
         h1 {
             margin-top: 20px;
             color: #333;
@@ -33,56 +47,31 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
             color: inherit;
             
         }
-
-        table {
-            border-collapse: collapse;
-            width: 95%;
-            margin: 20px auto;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-/*            background-color: #333;*/
-            color: #333;
-        }
-         td a:hover {
-            color: red
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #ddd;
-        }
     </style>
-
-    <div class="content-wrapper">
-        <h1>Kết quả thống kê mặt hàng theo doanh thu</h1>
-    <table style="text-align: center;" border="1">
+<div class="content-wrapper">
+        <h1 >Chi tiết các giao dịch</h1>
+    <table>
+        <tr>
             <th>Mã mặt hàng</th>
-            <th>Tên sản phẩm</th>
-            <th>Số lượng đã bán</th>
-            <th>Doanh thu</th>
-            <th>Chi tiết giao dịch</th>
-        <c:forEach items="${thongKeList}" var="p">
+            <th>Tên mặt hàng</th>
+            <th>Mã hóa đơn</th>           
+            <th>Số lượng</th>
+            <th>Ngày bán</th>
+            <th>Mã nhân viên bán hàng</th>
+            <th>Mã khách hàng</th>
+        </tr>    
+        <c:forEach items="${chiTietList}" var="c">
             <tr>
-                <td  style="text-align: center;">${p.maMH}</td>
-                <td>${p.name}</td>
-                <td  style="text-align: center;">${p.soluong}</td>
-                <td  style="text-align: right;">${p.doanhthu}</td>
-                <td><a href="chitiet?sid=${p.maMH}">click</a></td>
+                <td>${c.maMH}</td>
+                <td>${c.name}</td>
+                <td>${c.maHD}</td>
+                <td>${c.soLuong}</td>
+                <td>${c.ngay}</td>
+                <td>${c.maNVBH}</td>          
+                <td>${c.maKH}</td>
             </tr>
         </c:forEach>
     </table>
-    </div>
-        
-<%@ include file="footer.jsp"%>
+</div>
+        <%@ include file="footer.jsp"%>
 
