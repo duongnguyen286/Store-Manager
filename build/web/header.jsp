@@ -169,7 +169,7 @@
                 <a href="${pageContext.request.contextPath}/UserManual" class="brand-link"> <img
                         src="Resources/img/AdminLTELogo.png" alt="AdminLTE Logo"
                         class="brand-image img-circle elevation-3" style="opacity: .8">
-                    <span class="brand-text font-weight-light">Quán lý cửa hàng</span>
+                    <span class="brand-text font-weight-light">Quản lý cửa hàng</span>
                 </a>
 
                 <!-- Sidebar -->

@@ -47,13 +47,21 @@ public class AddCategory extends HttpServlet {
 		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		request.setCharacterEncoding("UTF-8");
-		String name_category = request.getParameter("name_category");
+	request.setCharacterEncoding("UTF-8");
+	String name_category = request.getParameter("name_category");
+
+	// Kiểm tra xem tên danh mục sản phẩm có bị để trống hay không
+	if (name_category == null || name_category.trim().isEmpty()) {
+		String errorString = "Tên danh mục sản phẩm không được để trống";
+		request.setAttribute("errorString", errorString);
+		
+		// Chuyển hướng người dùng trở lại trang thêm danh mục sản phẩm và hiển thị thông báo lỗi
+		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/add_category.jsp");
+		dispatcher.forward(request, response);
+	} else {
 		Category category = new Category();
-		System.out.println(name_category);
 		category.setName(name_category);
 		try {
 			int result = categoryBO.insertCategory(category);
@@ -62,8 +70,7 @@ public class AddCategory extends HttpServlet {
 			e.printStackTrace();
 		}
 		response.sendRedirect(request.getContextPath() + "/ManageCategory");
-//		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/ManageCategory");
-//		dispatcher.forward(request, response);
 	}
+}
 
 }

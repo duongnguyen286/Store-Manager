@@ -82,44 +82,49 @@ public class AddBook extends HttpServlet {
 	 *      response)
 	 */
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		request.setCharacterEncoding("UTF-8");
-		String name = request.getParameter("name");
-		String category_id = request.getParameter("category");
-		String count = request.getParameter("count");
-		Part file = request.getPart("fileImage");
-//		String path = getServletContext().getRealPath("/") + "Resources/images/";
-		String savePath = getServletContext().getRealPath("/") + "Resources\\img\\products";
-		File fileSaveDir = new File(savePath);
-		if (!fileSaveDir.exists()) {
-			fileSaveDir.mkdir();
-		}
-		String fileName = extractfilename(file);
-		file.write(savePath + File.separator + fileName);
-//		String filePath = savePath + File.separator + fileName;
-		Book book = new Book();
-		book.setName(name);
-		Category category = new Category();
-		try {
-			category = categoryBO.findCategory(category_id);
-		} catch (ClassNotFoundException | SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		book.setCategory(category);
-		book.setAmount(count);
-		book.setImage(fileName);
-		try {
-			int result = bookBO.insertBook(book);
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		request.setAttribute("errorString", "Thêm sách thành công");
-		doGet(request, response);
-	}
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    // TODO Auto-generated method stub
+    request.setCharacterEncoding("UTF-8");
+    String name = request.getParameter("name");
+    String category_id = request.getParameter("category");
+    String count = request.getParameter("count");
+    Part file = request.getPart("fileImage");
+
+    if (name == null || name.trim().isEmpty()) {
+        String errorString = "Tên sản phẩm không được để trống";
+        request.setAttribute("errorString", errorString);
+        doGet(request, response);
+        return;
+    }
+
+    String savePath = getServletContext().getRealPath("/") + "Resources\\img\\products";
+    File fileSaveDir = new File(savePath);
+    if (!fileSaveDir.exists()) {
+        fileSaveDir.mkdir();
+    }
+    String fileName = extractfilename(file);
+    file.write(savePath + File.separator + fileName);
+
+    Book book = new Book();
+    book.setName(name);
+    Category category = new Category();
+    try {
+        category = categoryBO.findCategory(category_id);
+    } catch (ClassNotFoundException | SQLException e1) {
+        e1.printStackTrace();
+    }
+    book.setCategory(category);
+    book.setAmount(count);
+    book.setImage(fileName);
+    try {
+        int result = bookBO.insertBook(book);
+    } catch (ClassNotFoundException | SQLException e) {
+        e.printStackTrace();
+    }
+    request.setAttribute("errorString", "Thêm sách thành công");
+    doGet(request, response);
+}
 
 	private String extractfilename(Part file) {
 		String cd = file.getHeader("content-disposition");
