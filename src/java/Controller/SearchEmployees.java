@@ -1,6 +1,7 @@
 package Controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -27,7 +28,7 @@ public class SearchEmployees extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchEmployees() {
+    public SearchEmployees() throws SQLException, ClassNotFoundException {
         super();
         // TODO Auto-generated constructor stub
     }

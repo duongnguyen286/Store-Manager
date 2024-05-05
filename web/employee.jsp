@@ -125,7 +125,7 @@
                                                             data-dismiss="modal">Hủy
                                                     </button>
                                                     <form
-                                                        action="${pageContext.request.contextPath}/delete-employeeq?id=${employee.getId()}"
+                                                        action="${pageContext.request.contextPath}/delete-employee?id=${employee.getId()}"
                                                         method="POST">
                                                         <button type="submit" class="btn btn-danger">Xóa</button>
                                                     </form>

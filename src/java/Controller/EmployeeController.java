@@ -34,7 +34,7 @@ public class EmployeeController extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EmployeeController() {
+    public EmployeeController() throws SQLException, ClassNotFoundException {
         super();
         // TODO Auto-generated constructor stub
     }

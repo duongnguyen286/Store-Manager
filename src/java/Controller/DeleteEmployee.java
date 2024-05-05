@@ -26,7 +26,7 @@ public class DeleteEmployee extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DeleteEmployee() {
+    public DeleteEmployee() throws SQLException, ClassNotFoundException {
         super();
         // TODO Auto-generated constructor stub
     }

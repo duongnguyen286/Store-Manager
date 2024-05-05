@@ -99,7 +99,7 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES (1,'SALE2','Nguyễn Đăng Long',0,'2024-03-02','2024-03-31',1711608848,1,NULL),(2,'SALE2','Nguyễn Đăng Huy',0,'2024-02-29','2024-03-30',1711608848,1,NULL),(55,'CC1','Nguyễn Quang Khải',1,'2024-02-29','2024-03-30',1711519469,1,''),(56,'SALE1','Nguyễn Đăng Long',0,'2024-03-14','2025-07-17',1711608822,1,''),(57,'SALE2','Nguyễn Đăng Huy',0,'2024-03-02','2024-03-31',1711608848,1,'');
+INSERT INTO `employees` VALUES (1,'SALE2','Nguyễn Đăng Long',0,'2024-03-02','2024-03-31',1711608848,1,'1711608848'),(2,'SALE2','Nguyễn Đăng Huy',0,'2024-02-29','2024-03-30',1711608848,1,'1711608848'),(55,'CC1','Nguyễn Quang Khải',1,'2024-02-29','2024-03-30',1711519469,1,''),(56,'SALE1','Nguyễn Đăng Long',0,'2024-03-14','2025-07-17',1711608822,1,''),(57,'SALE2','Nguyễn Đăng Huy',0,'2024-03-02','2024-03-31',1711608848,1,'');
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 

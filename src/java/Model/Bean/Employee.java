@@ -47,7 +47,16 @@ public class Employee {
         this.contract_start_at = contract_start_at;
         this.contract_end_at = contract_end_at;
         this.status = status;
-        this.created_at = status;
+        this.created_at = created_at;
+    }
+
+    public Employee(String name, int position, String contract_start_at, String contract_end_at, int status, int created_at) {
+        this.name = name;
+        this.position = position;
+        this.contract_start_at = contract_start_at;
+        this.contract_end_at = contract_end_at;
+        this.status = status;
+        this.created_at = created_at;
     }
 
     public int getId() {

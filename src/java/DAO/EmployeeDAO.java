@@ -1,12 +1,8 @@
 package DAO;
 
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
@@ -24,14 +20,18 @@ public class EmployeeDAO {
     Statement st = null;
     PreparedStatement preparedStatement = null;
 
-    public Employee findEmployee(String id) throws SQLException, ClassNotFoundException {
+    public EmployeeDAO() throws SQLException, ClassNotFoundException {
         if (conn == null) {
             conn = ConnectDatabase.getMySQLConnection();
         }
-        String sql = "Select * from employees where id=?";
+    }
+
+    public Employee findEmployee(String id) throws SQLException, ClassNotFoundException {
+        String sql = "Select * from employees where id=? and deleted_at=?";
 
         PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
         pstm.setString(1, id);
+        pstm.setString(2, "");
 
         ResultSet rs = pstm.executeQuery();
 
@@ -59,10 +59,6 @@ public class EmployeeDAO {
     }
 
     public int insertEmployee(Employee employee) throws SQLException, ClassNotFoundException {
-        if (conn == null) {
-            conn = ConnectDatabase.getMySQLConnection();
-        }
-
         try {
             st = (Statement) conn.createStatement();
         } catch (Exception e) {
@@ -74,7 +70,7 @@ public class EmployeeDAO {
         int result = 0;
         String insert = "INSERT INTO employees (code, name, status, position, "
                 + "contract_start_at, contract_end_at, created_at, deleted_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        preparedStatement = (PreparedStatement) conn.prepareStatement(insert);
+        preparedStatement = (PreparedStatement) conn.prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
         preparedStatement.setString(1, code);
         preparedStatement.setString(2, employee.getName());
         preparedStatement.setInt(3, employee.getStatus());
@@ -85,13 +81,15 @@ public class EmployeeDAO {
         preparedStatement.setString(8, "");
         result = preparedStatement.executeUpdate();
 
+        ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+        if (generatedKeys.next()) {
+            employee.setId(generatedKeys.getInt(1));
+        }
+
         return result;
     }
 
     public ArrayList<Employee> getAllEmployees() throws ClassNotFoundException, SQLException {
-        if (conn == null) {
-            conn = ConnectDatabase.getMySQLConnection();
-        }
         ArrayList<Employee> list = new ArrayList<Employee>();
         String sql = "Select * from employees WHERE deleted_at = '' ORDER BY created_at DESC";
         PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
@@ -122,10 +120,6 @@ public class EmployeeDAO {
     }
 
     public ArrayList<Employee> searchEmployees(String searchText) throws ClassNotFoundException, SQLException {
-        if (conn == null) {
-            conn = ConnectDatabase.getMySQLConnection();
-        }
-
         ArrayList<Employee> list = new ArrayList<Employee>();
         String sql = "Select * from employees where deleted_at = '' and (name like '%" + searchText + "%' "
                 + "or code like '%" + searchText + "%')";
@@ -157,11 +151,8 @@ public class EmployeeDAO {
     }
 
     public int updateEmployee(Employee employee, int oldPosition) throws SQLException, ClassNotFoundException {
-
         int result = 0;
-        if (conn == null) {
-            conn = ConnectDatabase.getMySQLConnection();
-        }
+
         String sql = "Update employees set name=?,status=?, position=?, "
                 + "contract_start_at=?, contract_end_at=?, code=? where id=? ";
         PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
@@ -171,7 +162,7 @@ public class EmployeeDAO {
         pstm.setInt(3, employee.getPosition());
         pstm.setString(4, employee.getContractStartAt());
         pstm.setString(5, employee.getContractEndAt());
-        pstm.setString(6, oldPosition != employee.getPosition() ? 
+        pstm.setString(6, oldPosition != employee.getPosition() ?
                 this.generateCode(employee.getPosition(), conn) : employee.getCode());
         pstm.setString(7, String.valueOf(employee.getId()));
         result = pstm.executeUpdate();
@@ -181,10 +172,7 @@ public class EmployeeDAO {
 
     public int deleteEmployee(String id) throws ClassNotFoundException, SQLException {
         int result = 0;
-        if (conn == null) {
-            conn = ConnectDatabase.getMySQLConnection();
-        }
-        System.out.println(id);
+
         String sql = "Update employees set deleted_at=? where id=?";
         PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
         pstm.setString(1, String.valueOf(Instant.now().getEpochSecond()));
@@ -212,6 +200,8 @@ public class EmployeeDAO {
                 sql = "SELECT code FROM employees WHERE code LIKE '%WH%' "
                         + "AND created_at = (SELECT MAX(created_at) FROM employees WHERE code LIKE '%WH%')";
                 code = "WH";
+            } else {
+                return "UNKNOWN";
             }
 
             PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
