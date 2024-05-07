@@ -13,9 +13,9 @@ public class chitiet1 {
     private String ngay;
     private String name;
     private int idKH;
-    private int tongtien;
+    private String tongtien;
 
-    public chitiet1(int idHd, String ngay, String name, int idKH, int tongtien) {
+    public chitiet1(int idHd, String ngay, String name, int idKH, String tongtien) {
         this.idHd = idHd;
         this.ngay = ngay;
         this.name = name;
@@ -55,11 +55,11 @@ public class chitiet1 {
         this.idKH = idKH;
     }
 
-    public int getTongtien() {
+    public String getTongtien() {
         return tongtien;
     }
 
-    public void setTongtien(int tongtien) {
+    public void setTongtien(String tongtien) {
         this.tongtien = tongtien;
     }
 

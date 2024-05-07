@@ -11,9 +11,9 @@ package Model.Bean;
 public class ThongKe1 {
     private int maNV;
     private String name;
-    private int doanhthu;
+    private String doanhthu;
 
-    public ThongKe1(int maNV, String name, int doanhthu) {
+    public ThongKe1(int maNV, String name, String doanhthu) {
         this.maNV = maNV;
         this.name = name;
         this.doanhthu = doanhthu;
@@ -35,11 +35,11 @@ public class ThongKe1 {
         this.name = name;
     }
 
-    public int getDoanhthu() {
+    public String getDoanhthu() {
         return doanhthu;
     }
 
-    public void setDoanhthu(int doanhthu) {
+    public void setDoanhthu(String doanhthu) {
         this.doanhthu = doanhthu;
     }
 

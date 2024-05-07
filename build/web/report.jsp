@@ -81,6 +81,9 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
         #ketqua {
             margin-top: 20px;
         }
+        h1{
+            font-size: 17px;
+        }
         #type{
 /*            padding-bottom: 5px;
             padding-top: 3px;
@@ -107,6 +110,7 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
         <div id="optionThongKe">
             
              <form id="statisticForm" action="/StatisticServlet" method="post" >
+                 <h1>Loại thống kê:</h1>
                     <select id="thongke" name="thongke1">
                         <option value="doanhthumh">Thống kê mặt hàng theo doanh thu</option>
                         <option value="doanhthunv">Thống kê nhân viên theo doanh thu</option>                      
@@ -134,5 +138,22 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
             document.getElementById("type").click(); // Kích hoạt sự kiện click trên nút submit
         }
     });  
+     document.getElementById("statisticForm").addEventListener("submit", function(event) {
+        // Lấy giá trị của ngày bắt đầu và ngày kết thúc từ form
+        var startDate = document.getElementsByName("startDate")[0].value;
+        var endDate = document.getElementsByName("endDate")[0].value;
+
+        // Chuyển đổi ngày từ chuỗi sang đối tượng Date để so sánh
+        var startDateObj = new Date(startDate);
+        var endDateObj = new Date(endDate);
+
+        // Kiểm tra nếu startDate không trước endDate
+        if (startDateObj >= endDateObj) {
+            // Ngăn chặn form được submit
+            event.preventDefault();
+            // Hiển thị thông báo cho người dùng
+            alert("Ngày bắt đầu phải trước ngày kết thúc!");
+        }
+    });
     </script>
 <%@ include file="footer.jsp"%>

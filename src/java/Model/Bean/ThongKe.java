@@ -16,7 +16,7 @@ public class ThongKe {
     private Integer maMH;
     private String name;
     private Integer soluong;
-    private Integer doanhthu;
+    private String doanhthu;
     
     public ThongKe(){
         
@@ -39,11 +39,11 @@ public class ThongKe {
     }
 
 
-    public Integer getDoanhthu() {
+    public String getDoanhthu() {
         return doanhthu;
     }
 
-    public void setDoanhthu(Integer doanhthu) {
+    public void setDoanhthu(String doanhthu) {
         this.doanhthu = doanhthu;
     }
     
@@ -55,7 +55,7 @@ public class ThongKe {
         this.soluong = soluong;
     }
 
-    public ThongKe(Integer maMH, String name, Integer soluong, Integer doanhthu) {
+    public ThongKe(Integer maMH, String name, Integer soluong, String doanhthu) {
         this.maMH = maMH;
         this.name = name;
         this.soluong=soluong;
