@@ -31,14 +31,25 @@
 						<div class="card-header">
 							<h3 class="card-title">Chỉnh sửa tên danh mục sản phẩm</h3>
 						</div>
+                                            
+                                            <script>
+                            function validateForm() {
+                                var name_category = document.getElementById("name_category").value;
+                                if (!name_category || name_category.trim() === "") {
+                                    alert("Tên danh mục sản phẩm không được để trống");
+                                    return false;
+                                }
+                                return true;
+                            }
+                        </script>
 						<!-- /.card-header -->
 						<!-- form start -->
 						<form role="form" method="post"
-							action="${pageContext.request.contextPath}/EditCategory">
+							action="${pageContext.request.contextPath}/EditCategory" onsubmit="return validateForm()">
 							<div class="card-body">
 								<input type="hidden" name="id" value="${category.id}" />
 								<div class="form-group">
-									<label>Tên danh mục sản phẩm</label> <input type="text"
+									<label>Tên danh mục sản phẩm<span style="color: red">&nbsp;*</span></label> <input type="text"
 										class="form-control" id="name_category" name="name_category"
 										value="${category.name}">
 								</div>
