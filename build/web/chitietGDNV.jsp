@@ -54,7 +54,7 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
             <th>Ngày</th>
             <th>Tên nhân viên</th>           
             <th>Mã khách hàng</th>
-            <th>Tổng tiền</th>
+            <th style="text-align: right;">Tổng tiền (VND)</th>
         </tr>    
         <c:forEach items="${chiTietNVList}" var="c">
             <tr>
@@ -62,7 +62,7 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
                 <td>${c.ngay}</td>
                 <td>${c.name}</td>
                 <td>${c.idKH}</td>
-                <td>${c.tongtien}</td>          
+                <td style="text-align: right;">${c.tongtien}</td>          
             </tr>
         </c:forEach>
     </table>
