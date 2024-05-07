@@ -61,8 +61,8 @@
 														</button>
 													</div>
 													<div class="modal-body">
-														<span class="text-danger"> Bạn có muốn chắc xóa thể
-															loại '${category.getName()}'</span>
+														<span class="text-danger"> Bạn có muốn chắc xóa
+															danh mục sản phẩm '${category.getName()}'</span>
 													</div>
 													<div class="modal-footer">
 														<button type="button"

@@ -81,7 +81,7 @@
 							<div class="card-footer">
 								<button type="submit" class="btn btn-primary ">Lưu</button>
 								<input type="button" value="Trở lại" class="btn btn-secondary"
-									onclick="location.href='${pageContext.request.contextPath}/ManageBook'">
+									onclick="location.href='${pageContext.request.contextPath}/ListProduct'">
 							</div>
 						</form>
 					</div>

@@ -98,8 +98,8 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <span class="text-danger"> Bạn có muốn chắc xóa
-                                                        cuốn sách '${book.getName()}'</span>
+                                                    <span class="text-danger"> Bạn có chắc chắn xóa
+                                                        loại mặt hàng '${book.getName()}'</span>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button"
@@ -138,8 +138,8 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <span class="text-danger"> Bạn có muốn chắc xóa tất
-                                                    cả sách</span>
+                                                <span class="text-danger"> Bạn có chắc chắn muốn xóa tất
+                                                    cả loại mặt hàng</span>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-warning  btn-secondary"
