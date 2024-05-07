@@ -10,7 +10,7 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 
-import Model.Bean.Book;
+import Model.Bean.Product;
 import Model.Bean.Category;
 import Model.Bean.User;
 

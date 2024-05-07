@@ -9,7 +9,7 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 
-import BO.BookBO;
+import BO.ProductBO;
 import Model.Bean.Category;
 
 public class CategoryDAO {
@@ -87,8 +87,8 @@ public class CategoryDAO {
 		int result = 0;
 		if (conn == null)
 			conn = ConnectDatabase.getMySQLConnection();
-		BookBO bookBO = new BookBO();
-		bookBO.deleteBookCategory(id);
+		ProductBO productBO = new ProductBO();
+		productBO.deleteProductCategory(id);
 		String sql = "Delete From Category where id= ?";
 		PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
 		pstm.setString(1, id);
