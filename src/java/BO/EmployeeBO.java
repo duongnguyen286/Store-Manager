@@ -1,16 +1,16 @@
 package BO;
 
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 import DAO.EmployeeDAO;
 import Model.Bean.Employee;
 
 public class EmployeeBO {
-
     EmployeeDAO employeeDAO = new EmployeeDAO();
+
+    public EmployeeBO() throws SQLException, ClassNotFoundException {
+    }
 
     public Employee findEmployee(String id) throws ClassNotFoundException, SQLException {
         return employeeDAO.findEmployee(id);
