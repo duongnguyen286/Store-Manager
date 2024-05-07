@@ -16,7 +16,7 @@
                         <form role="form" method="post"
                               action="${pageContext.request.contextPath}/search-employees">
                             <div class="card-header">
-                                <h3 class="card-title">Danh sách nhân viên</h3>
+                                <h3 class="card-title">Quản lý nhân viên</h3>
 
                                 <div class="card-tools" style="margin-right: 1px;">
                                     <div class="input-group input-group-sm" style="width: 350px;">
