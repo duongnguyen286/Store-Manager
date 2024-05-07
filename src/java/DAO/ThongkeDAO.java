@@ -24,8 +24,8 @@ public class ThongkeDAO {
     
     public static List<ThongKe> search(String ngaybd, String ngaykt){
         List<ThongKe>list=new ArrayList<>();
-        String query="SELECT h.idMH, b.name,SUM(h.soluong) AS soluong ,SUM(b.price * h.soluong) AS doanhthu\n" +
-"FROM Book b\n" +
+        String query="SELECT h.idMH, b.name,SUM(h.soluong) AS soluong ,FORMAT(SUM(b.price * h.soluong), 'N0') AS doanhthu\n" +
+"FROM product b\n" +
 "INNER JOIN hoadonmh h ON b.id = h.idMH\n" +
 "INNER JOIN hoadon ON h.idHD = hoadon.idHoaDon\n" +
 "WHERE hoadon.ngay BETWEEN '"+ngaybd+"' AND '"+ngaykt+"'\n" +
@@ -37,7 +37,7 @@ public class ThongkeDAO {
             rs=ps.executeQuery();
             while(rs.next()){
                 list.add(new ThongKe(rs.getInt(1), rs.getString(2),rs.getInt(3),
-                                       rs.getInt(4)));
+                                       rs.getString(4)));
             }
             System.out.println(list);
             
@@ -48,7 +48,7 @@ public class ThongkeDAO {
     }
     public static List<ThongKe1> search1(String ngaybd, String ngaykt){
         List<ThongKe1>list=new ArrayList<>();
-        String query="SELECT e.id, e.name, SUM(h.TongTien) AS TongTien\n" +
+        String query="SELECT e.id, e.name, FORMAT(SUM(h.TongTien), 'N0') AS TongTien\n" +
             "FROM hoadon h\n" +
             "JOIN employees e ON h.idNVBH = e.id\n" +
             "WHERE h.ngay >= '"+ngaybd+"' AND h.ngay <= '"+ngaykt+"'\n" +
@@ -58,7 +58,7 @@ public class ThongkeDAO {
             ps=conn.prepareStatement(query);
             rs=ps.executeQuery();
             while(rs.next()){
-                list.add(new ThongKe1(rs.getInt(1), rs.getString(2),rs.getInt(3)));
+                list.add(new ThongKe1(rs.getInt(1), rs.getString(2),rs.getString(3)));
             }
             System.out.println(list);
             

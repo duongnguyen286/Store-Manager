@@ -66,19 +66,19 @@ src="Resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></
     </style>
     <div class="content-wrapper">
 
-        <h1>Kết quả thống kê mặt hàng theo doanh thu</h1>
+        <h1>Kết quả thống kê nhân viên theo doanh thu</h1>
     <table style="text-align: center;" border="1">
         <tr>
             <th>Mã nhân viên</th>
             <th>Tên sản phẩm</th>
-            <th>Doanh thu</th>
+            <th style="text-align: right;">Doanh thu (VND)</th>
             <th>Chi tiết giao dịch</th>
         </tr>
         <c:forEach items="${thongKeNvList}" var="p">
             <tr>
                 <td>${p.maNV}</td>
                 <td>${p.name}</td>
-                <td>${p.doanhthu}</td>
+                <td style="text-align: right;">${p.doanhthu}</td>
                 <td><a href="chitiet1?sid=${p.maNV}">click</a></td>
             </tr>
         </c:forEach>

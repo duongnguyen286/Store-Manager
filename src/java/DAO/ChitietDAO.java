@@ -25,10 +25,10 @@ public class ChitietDAO {
     
     public static List<ChiTiet> ChiTiet(String maMH){
         List<ChiTiet>list=new ArrayList<>();
-        String query="SELECT hoadonmh.idMH, book.name, hoadonmh.idHD, hoadonmh.soluong, hoadon.ngay, hoadon.idNVBH, hoadon.idKH\n" +
+        String query="SELECT hoadonmh.idMH, product.name, hoadonmh.idHD, hoadonmh.soluong, hoadon.ngay, hoadon.idNVBH, hoadon.idKH\n" +
 "FROM hoadonmh\n" +
 "INNER JOIN hoadon ON hoadonmh.idHD = hoadon.idhoadon\n" +
-"INNER JOIN book ON hoadonmh.idMH = book.id\n" +
+"INNER JOIN product ON hoadonmh.idMH = product.id\n" +
 "WHERE hoadonmh.idMH = '"+maMH+"' ";
         try {
             conn = ConnectDatabase.getMySQLConnection();
@@ -48,7 +48,7 @@ public class ChitietDAO {
     
     public static List<chitiet1> ChiTietNV(String maNV){
         List<chitiet1>list=new ArrayList<>();
-        String query="SELECT h.idHoaDon, h.ngay, e.name, h.idKH, h.TongTien\n" +
+        String query="SELECT h.idHoaDon, h.ngay, e.name, h.idKH, FORMAT(h.TongTien, 'N0') AS TongTien\n" +
                         "FROM hoadon h\n" +
                         "JOIN employees e ON h.idNVBH = e.id\n" +
                         "WHERE h.idNVBH = '"+maNV+"';";
@@ -59,7 +59,7 @@ public class ChitietDAO {
             while(rs.next()){
                 list.add(new chitiet1(rs.getInt(1), rs.getString(2),
                                      rs.getString(3), rs.getInt(4),
-                                     rs.getInt(5)));
+                                     rs.getString(5)));
             }
             System.out.println(query);   
         } catch (Exception e) {
