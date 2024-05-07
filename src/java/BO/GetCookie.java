@@ -12,7 +12,7 @@ public class GetCookie {
 	private static final String ATT_NAME_USER_NAME = "ATTRIBUTE_FOR_STORE_USER_NAME_IN_COOKIE";
 	public static void storeUserCookie(HttpServletResponse response, User user) {
 		System.out.println("Store user cookie");
-		Cookie cookieUserName = new Cookie(ATT_NAME_USER_NAME, user.getUsername());
+		Cookie cookieUserName = new Cookie(ATT_NAME_USER_NAME, user.getEmail());
 		// 1 ngày (Đã đổi ra giây)
 		cookieUserName.setMaxAge(24 * 60 * 60);
 		response.addCookie(cookieUserName);

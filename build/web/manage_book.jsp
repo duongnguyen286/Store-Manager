@@ -48,7 +48,7 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 10px">STT</th>
-                                        <th style="width: 318px;">Tên sản phẩm</th>
+                                        <th style="width: 318px;">Tên loại mặt hàng</th>
                                         <th>Danh mục sản phẩm</th>
                                         <th>Số lượng</th>
                                         <th>Ngày nhập</th>

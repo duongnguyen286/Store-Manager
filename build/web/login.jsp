@@ -38,9 +38,11 @@
 							</div>
 							<div class="card-body">
 								<div class="form-group">
-									<label for="exampleInputEmail1">Tên đăng nhập</label> <input
-										type="text" class="form-control" name="username"
-										placeholder="Nhập tên đăng nhập" required="required">
+									<label for="exampleInputEmail1">Email đăng nhập</label> <input
+										type="email" class="form-control" name="username"
+										placeholder="Nhập email đăng nhập" required="required"
+                                                                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                                                                >
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPassword1">Mật khẩu</label> <input
@@ -56,14 +58,14 @@
 								</div>
 								<div style="margin-bottom: -14px; margin-top: 25px;">
 									<h6>
-										<b>Chú ý:</b> Tên đăng nhập: <b>duongnguyen286</b>, mật khẩu: <b>duongnguyen286</b>
+										<b>Chú ý:</b> Email đăng nhập: <b>duongnguyen286@gmail.com</b>, mật khẩu: <b>duongnguyen286</b>
 									</h6>
 								</div>
 							</div>
 							<!-- /.card-body -->
 
 							<div class="card-footer">
-								<button type="submit" class="btn btn-primary">Submit</button>
+								<button type="submit" class="btn btn-primary">Login</button>
 							</div>
 						</form>
 					</div>

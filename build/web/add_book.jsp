@@ -41,9 +41,9 @@
 
 							<div class="card-body">
 								<div class="form-group">
-									<label>Nhập tên sản phẩm<span style="color: red">&nbsp;*</span></label> <input type="text"
+									<label>Tên loại mặt hàng<span style="color: red">&nbsp;*</span></label> <input type="text"
 										class="form-control" id="name" name="name"
-										placeholder="Nhập tên sản phẩm">
+										placeholder="Nhập tên loại mặt hàng">
 								</div>
 								<div class="form-group">
 									<label>Danh mục sản phẩm</label> <select name="category" id="category"

@@ -188,7 +188,7 @@
                         </div>
                         <div class="info">
 
-                            <a href="#" class="d-block"><%=user.getUsername()%></a>
+                            <a href="#" class="d-block"><%=user.getEmail().split("@")[0]%></a>
                         </div>
                         <%
                         } else {

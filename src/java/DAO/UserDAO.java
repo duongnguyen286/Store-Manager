@@ -19,13 +19,13 @@ public class UserDAO {
 	Statement st = null;
 	PreparedStatement preSt = null;
 
-	public User getUser(String username, String password) throws ClassNotFoundException, SQLException {
+	public User getUser(String email, String password) throws ClassNotFoundException, SQLException {
 		if (conn == null)
 			conn = ConnectDatabase.getMySQLConnection();
-		String sql = "Select * from User where username=? and password=?";
+		String sql = "Select * from User where email=? and password=?";
 
 		PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
-		pstm.setString(1, username);
+		pstm.setString(1, email);
 		pstm.setString(2, password);
 		ResultSet rs = pstm.executeQuery();
 
@@ -33,20 +33,20 @@ public class UserDAO {
 			String id = rs.getString("id");
 			User user = new User();
 			user.setId(id);
-			user.setUsername(username);
+			user.setEmail(email);
 			user.setPassword(password);
 			return user;
 		}
 		return null;
 	}
 
-	public User findUser(String username) throws ClassNotFoundException, SQLException {
+	public User findUser(String email) throws ClassNotFoundException, SQLException {
 		if (conn == null)
 			conn = ConnectDatabase.getMySQLConnection();
-		String sql = "Select * from User where username=?";
+		String sql = "Select * from User where email=?";
 
 		PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
-		pstm.setString(1, username);
+		pstm.setString(1, email);
 		ResultSet rs = pstm.executeQuery();
 
 		while (rs.next()) {
@@ -54,7 +54,7 @@ public class UserDAO {
 			String password = rs.getString("password");
 			User user = new User();
 			user.setId(id);
-			user.setUsername(username);
+			user.setEmail(email);
 			user.setPassword(password);
 			return user;
 		}
