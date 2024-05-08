@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin/Desktop/Store-Manager/web/chitietGDNV.jsp</file>
-            <file>file:/C:/Users/Admin/Desktop/Store-Manager/web/thongkenv.jsp</file>
-            <file>file:/C:/Users/Admin/Desktop/Store-Manager/web/thongke.jsp</file>
-            <file>file:/C:/Users/Admin/Desktop/Store-Manager/src/java/Model/Bean/chitiet1.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Store-Manager/test/DAO/ThongkeDAOIT.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Store-Manager/web/chitietGD.jsp</file>
+            <file>file:/D:/PTIT-2024/DBCLPM/Store-Manager/test/DAO/EmployeeDAOTest.java</file>
+            <file>file:/D:/PTIT-2024/DBCLPM/Store-Manager/src/java/DAO/EmployeeDAO.java</file>
+            <file>file:/D:/PTIT-2024/DBCLPM/Store-Manager/test/DAO/ChitietDAOIT.java</file>
         </group>
     </open-files>
 </project-private>
