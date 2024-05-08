@@ -42,7 +42,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Họ và tên <span style="color: red">&nbsp;*</span></label> 
-                                    <input type="text" class="form-control" id="name" name="name" onclick="handleRemoveValidateName()"
+                                    <input type="text" class="form-control" id="name" name="name" onchange="handleRemoveValidateName()" onclick="handleRemoveValidateName()"
                                            placeholder="Nhập tên nhân viên">
                                     <div style="color: red" id="validateName"></div>
                                 </div>
@@ -76,8 +76,8 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <button type="button" onclick="handleSubmitForm()" class="btn btn-primary ">Tạo mới</button>
-                                <input type="button" value="Trở lại" class="btn btn-secondary"
+                                <button type="button" id="submit_add_button" onclick="handleSubmitForm()" class="btn btn-primary ">Tạo mới</button>
+                                <input type="button" id="back_button" value="Trở lại" class="btn btn-secondary"
                                        onclick="location.href = '${pageContext.request.contextPath}/employees'">
                             </div>
                         </form>

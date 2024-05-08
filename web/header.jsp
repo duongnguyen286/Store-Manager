@@ -250,7 +250,7 @@
                                     <p>Báo cáo thống kê</p>
                                 </a>
                             </li>
-                            <li class="nav-item has-treeview <c:if test="${sessionScope.Check.toString().equals('Employee')}">menu-open</c:if>">
+                            <li  id="employee_tab" class="nav-item has-treeview <c:if test="${sessionScope.Check.toString().equals('Employee')}">menu-open</c:if>">
                                 <a href="${pageContext.request.contextPath}/employees" class="nav-link">
                                     <i class="nav-icon fas fa-book"></i>
                                     <p>Quản lý nhân viên</p>

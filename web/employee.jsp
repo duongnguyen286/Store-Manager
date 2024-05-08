@@ -25,7 +25,7 @@
                                                placeholder="Tìm kiếm theo tên hoặc mã nhân viên">
 
                                         <div class="input-group-append">
-                                            <button type="submit" class="btn btn-primary">
+                                            <button id="searchButton" type="submit" class="btn btn-primary">
                                                 <i class="fas fa-search"></i>
                                             </button>
                                         </div>
@@ -40,7 +40,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div class="card-header" style="margin-left: -20px; margin-top: -40px;">
-                                <input type="button" value="Tạo mới"
+                                <input id="addButton" type="button" value="Tạo mới"
                                        class="btn btn-primary"
                                        onclick="location.href = '${pageContext.request.contextPath}/add-employee'">
                             </div>
@@ -87,11 +87,11 @@
                                                 </c:if>
                                             </td>
                                             <td style="display: flex !important; justify-content: center; align-items: center; width: 120px">
-                                                <a
+                                                <a id="update_button"
                                                     href="${pageContext.request.contextPath}/update-employee?id=${employee.getId()}"
                                                     class="btn btn-sm btn-info">Chỉnh sửa
                                                 </a>
-                                                <button
+                                                <button id="delete_button"
                                                     type="button" class="btn btn-primary btn-danger"
                                                     data-toggle="modal"
                                                     data-target="#staticBackdrop-${employee.getId()}"
@@ -127,7 +127,7 @@
                                                     <form
                                                         action="${pageContext.request.contextPath}/delete-employee?id=${employee.getId()}"
                                                         method="POST">
-                                                        <button type="submit" class="btn btn-danger">Xóa</button>
+                                                        <button id="submit_delete_button" type="submit" class="btn btn-danger">Xóa</button>
                                                     </form>
 
                                                 </div>

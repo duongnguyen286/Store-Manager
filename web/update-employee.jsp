@@ -79,8 +79,8 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <button type="button" onclick="handleSubmitForm()" class="btn btn-primary ">Lưu</button>
-                                <input type="button" value="Trở lại" class="btn btn-secondary"
+                                <button type="button" id="submit_update_button" onclick="handleSubmitForm()" class="btn btn-primary ">Lưu</button>
+                                <input type="button" id="update_back_button" value="Trở lại" class="btn btn-secondary"
                                        onclick="location.href = '${pageContext.request.contextPath}/employees'">
                             </div>
                         </form>
