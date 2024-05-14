@@ -118,6 +118,7 @@
                                                 <div class="modal-body">
                                                     <span class="text-danger"> Bạn có chắc chắn muốn xóa
                                                         nhân viên '${employee.getName()}' không?</span>
+                                                    <div style="display: none" id="employeeId">${employee.getId()}</div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button"
@@ -125,6 +126,7 @@
                                                             data-dismiss="modal">Hủy
                                                     </button>
                                                     <form
+                                                            id="delete-form"
                                                         action="${pageContext.request.contextPath}/delete-employee?id=${employee.getId()}"
                                                         method="POST">
                                                         <button id="submit_delete_button" type="submit" class="btn btn-danger">Xóa</button>
